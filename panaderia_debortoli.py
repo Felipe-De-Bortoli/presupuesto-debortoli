@@ -7,7 +7,9 @@ productos = ["Chipa", "harina", "medialuna", "Agua 500ml", "criollo"]
 
 cliente = st.text_input ("ingrese su nombre para continuar")
 precios = [500, 1000, 700, 1200, 300]
-if cliente != "":
+if cliente == "":
+    st.warning("Escribí el nombre del cliente para armar el presupuesto")
+else:
     producto1 = st.selectbox("Producto N°1", productos)
 
 
