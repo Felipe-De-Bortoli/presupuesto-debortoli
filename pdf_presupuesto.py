@@ -44,7 +44,8 @@ def armar_pdf(numero, fecha, cliente, producto1, producto2, producto3, cantidad1
     pdf.ln(10)
     pdf.set_font("Helvetica", "I", 9)
     pdf.cell(0, 6, "Presupuesto válido por 7 días.", new_x="LMARGIN", new_y="NEXT")
- def limpiar(texto):
-    return texto.encode("latin-1", "ignore").decode("latin-1").strip()
+
 
     return bytes(pdf.output())
+def limpiar(texto):
+    return texto.encode("latin-1", "ignore").decode("latin-1").strip()
