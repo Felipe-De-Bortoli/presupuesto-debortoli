@@ -1,11 +1,12 @@
 import streamlit as st
 import calculos as cl
-
+import pdf_presupuesto
 st.title("Panaderia De Bortoli")
 
 productos = ["Chipa", "harina", "medialuna", "Agua 500ml", "criollo"]
 
 cliente = st.text_input ("ingrese su nombre para continuar")
+cliente=pdf_presupuesto.limpiar(cliente)
 precios = [500, 1000, 700, 1200, 300]
 if cliente == "":
     st.warning("Escribí el nombre del cliente para armar el presupuesto")
